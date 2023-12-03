@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rad{
+            border-radius: 50%;
+            background-color: rgb(116, 23, 38);
+            transition: 3s;
+        }
+        .radr{
+            border-radius: 50%;
+            background-color: rgb(116, 79, 10);
+            transition: 3s;
+        }
+        .container{
+            display: inline-grid;
+            grid-template-rows: repeat(10,30px);
+            grid-template-columns: repeat(10,30px);
+            background-color: aquamarine;
+            background-image: url(Snake\ and\ Ladder.jpg);
+            background-size: cover;
+        }
+        .div{
+            border: 0.5px solid black;
+        }
+        .parent{
+            display: flex;
+            justify-content: space-evenly;
+            color: grey;
+        }
+        .dice{
+            display: flex;
+            padding: 20px;
+        }
+        .ot{
+            display: block;
+        }
+        .trackRecord{
+            height: 300px;
+            width: 150px;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+            text-align: center;
+            font-size: 10px;
+            overflow: scroll;
+        }
+        .append1{
+            padding: 4px;
+            background-color: rgb(116, 23, 38);
+            border-radius: 7px;
+            margin-top: 2px;
+            color: white;
+        }
+        .append2{
+            padding: 4px;
+            background-color: rgb(116, 79, 10);
+            border-radius: 7px;
+            margin-top: 2px;
+            color: white;
+        }
+        /* .player1{
+            background-color: rgb(116, 23, 38);
+            border-radius: 52%;
+            height: 25px;
+            width: 25px;
+            margin-top: 270px;
+            color: white;
+            text-align: center;
+        }
+        .player2{
+            background-color: rgb(116, 79, 10);
+            border-radius: 52%;
+            height: 25px;
+            width: 25px;
+            margin-top: 270px;
+            color: white;
+            text-align: center;
+        } */
+        body{
+           background: linear-gradient(to right, #00dbde, #fc00ff); 
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+   <div class="trackRecord"><h3>Game History</h3x></div>
+<div class="container">
+    <div class="div square100"></div>
+    <div class="div square99"></div>
+    <div class="div square98"></div>
+    <div class="div square97"></div>
+    <div class="div square96"></div>
+    <div class="div square95"></div>
+    <div class="div square94"></div>
+    <div class="div square93"></div>
+    <div class="div square92"></div>
+    <div class="div square91"></div>
+    <div class="div square81"></div>
+    <div class="div square82"></div>
+    <div class="div square83"></div>
+    <div class="div square84"></div>
+    <div class="div square85"></div>
+    <div class="div square86"></div>
+    <div class="div square87"></div>
+    <div class="div square88"></div>
+    <div class="div square89"></div>
+    <div class="div square90"></div>  
+    <div class="div square80"></div>
+    <div class="div square79"></div>
+    <div class="div square78"></div>
+    <div class="div square77"></div>
+    <div class="div square76"></div>
+    <div class="div square75"></div>
+    <div class="div square74"></div>
+    <div class="div square73"></div>
+    <div class="div square72"></div>
+    <div class="div square71"></div>
+    <div class="div square61"></div>
+    <div class="div square62"></div>
+    <div class="div square63"></div>
+    <div class="div square64"></div>
+    <div class="div square65"></div>
+    <div class="div square66"></div>
+    <div class="div square67"></div>
+    <div class="div square68"></div>
+    <div class="div square69"></div>
+    <div class="div square70"></div>
+    <div class="div square60"></div>
+    <div class="div square59"></div>
+    <div class="div square58"></div>
+    <div class="div square57"></div>
+    <div class="div square56"></div>
+    <div class="div square55"></div>
+    <div class="div square54"></div>
+    <div class="div square53"></div>
+    <div class="div square52"></div>
+    <div class="div square51"></div>
+    <div class="div square41"></div>
+    <div class="div square42"></div>
+    <div class="div square43"></div>
+    <div class="div square44"></div>
+    <div class="div square45"></div>
+    <div class="div square46"></div>
+    <div class="div square47"></div>
+    <div class="div square48"></div>
+    <div class="div square49"></div>
+    <div class="div square50"></div>
+    <div class="div square40"></div>
+    <div class="div square39"></div>
+    <div class="div square38"></div>
+    <div class="div square37"></div>
+    <div class="div square36"></div>
+    <div class="div square35"></div>
+    <div class="div square34"></div>
+    <div class="div square33"></div>
+    <div class="div square32"></div>
+    <div class="div square31"></div>
+    <div class="div square21"></div>
+    <div class="div square22"></div>
+    <div class="div square23"></div>
+    <div class="div square24"></div>
+    <div class="div square25"></div>
+    <div class="div square26"></div>
+    <div class="div square27"></div>
+    <div class="div square28"></div>
+    <div class="div square29"></div>
+    <div class="div square30"></div>
+    <div class="div square20"></div>
+    <div class="div square19"></div>
+    <div class="div square18"></div>
+    <div class="div square17"></div>
+    <div class="div square16"></div>
+    <div class="div square15"></div>
+    <div class="div square14"></div>
+    <div class="div square13"></div>
+    <div class="div square12"></div>
+    <div class="div square11"></div>
+    <div class="div square1"></div>
+    <div class="div square2"></div>
+    <div class="div square3"></div>
+    <div class="div square4"></div>
+    <div class="div square5"></div>
+    <div class="div square6"></div>
+    <div class="div square7"></div>
+    <div class="div square8"></div>
+    <div class="div square9"></div>
+    <div class="div square10"></div>
+</div>
+<div class="ot">
+<div class="other">
+    <img src="" alt="" height="100px" width="100px">
+</div>
+<div class="dice">
+    <button onclick=roll1()>Player1</button>
+    <button onclick=roll2()>Player2</button>
+    <h1 id="result"></h1>
+</div>
+</div>
+</div>
+<button id="action">Download csv</button>
+
+	<script type="text/javascript"
+		src="main.js"></script>
+<script>
+    const array=[]
+    document.querySelector('img').setAttribute('src',`ladder gif.gif`)
+    function win(){
+        let w = new Audio('win.wav')
+        w.play()
+    }
+    function playmusic(){
+        let r = new Audio('dice.mp3.wav')
+        r.play()
+    }
+    function snake(){
+        let s = new Audio('snake.wav')
+        s.play()
+    }
+    function ladder(){
+        let l = new Audio('ladder.wav')
+        l.play()
+    }
+    let user1dicevalue=0
+    let user2dicevalue=0
+    document.getElementsByTagName('button')[1].style.display="none"
+    function roll1(){
+    playmusic()
+    let  L = [1,2,3,4,5,6]
+    let N = Math.floor(Math.random()*6);
+    document.querySelector("img").setAttribute("src",`D-${L[N]}.PNG`)
+    if((user1dicevalue+L[N])<=100){
+    user1dicevalue+=L[N]
+    console.log(`${user1dicevalue}-1`)
+    if(L[N] == 6){
+    document.getElementsByTagName('button')[1].style.display="none"
+    document.getElementsByTagName('button')[0].style.display="block"
+    }else{
+    document.getElementsByTagName('button')[0].style.display="none"
+    document.getElementsByTagName('button')[1].style.display="block"
+    }
+    if(user1dicevalue==1){
+        ladder()
+        document.getElementsByClassName(`square${user1dicevalue + 37}`)[0].classList.add('rad')
+        user1dicevalue = 38
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        trackRecord1()
+    }else if(user1dicevalue==4){
+        ladder()
+        document.getElementsByClassName(`square${user1dicevalue + 10}`)[0].classList.add('rad')
+        user1dicevalue = 14
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        trackRecord1()
+    }else if(user1dicevalue==9){
+        ladder()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 31
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==21){
+        ladder()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 42
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==28){
+        ladder()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 84
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==51){
+        ladder()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 67
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==72){
+        ladder()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 91
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==80){
+        ladder()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 99
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==17){
+        snake()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 7
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==54){
+        snake()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 34
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==62){
+        snake()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 19
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==64){
+        snake()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 60
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==87){
+        snake()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 36
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==93){
+        snake()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 73
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==95){
+        snake()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 75
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue==98){
+        snake()
+        document.getElementsByClassName(`square${user1dicevalue - L[N]}`)[0].classList.remove('rad')
+        user1dicevalue = 79
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        trackRecord1()
+    }else if(user1dicevalue ==100){
+        win()
+        document.getElementById('result').innerHTML='Player1 Won'
+        document.querySelector('img').setAttribute('src','Winning.gif')
+        document.getElementsByTagName('button')[1].style.display="none"
+        document.getElementsByTagName('button')[0].style.display="none"
+    }
+    else{
+        trackRecord1()
+        document.getElementsByClassName(`square${user1dicevalue}`)[0].classList.add('rad')
+        document.getElementsByClassName(`square${user1dicevalue-L[N]}`)[0].classList.remove('rad')
+    }
+    function trackRecord1(){
+    let record = document.querySelector('.trackRecord')
+    let record1 = document.createElement('div')
+    record1.classList='append1'
+    record1.innerHTML = `Player1 Dice Value ${L[N]} moved to ${user1dicevalue}`
+    record.appendChild(record1)
+    array.push({user:'player1',DiceValue:L[N],MovedTo:user1dicevalue})
+    }
+    }
+    
+    }
+    function roll2(){
+    playmusic()
+    let  L = [1,2,3,4,5,6]
+    let N = Math.floor(Math.random()*6);
+    document.querySelector("img").setAttribute("src",`D-${L[N]}.PNG`)
+    if((user2dicevalue+L[N])<=100){
+    user2dicevalue+=L[N]
+    console.log(`${user2dicevalue}-2`)
+    if(L[N] == 6){
+    document.getElementsByTagName('button')[0].style.display="none"
+    document.getElementsByTagName('button')[1].style.display="block"
+    }else{
+    document.getElementsByTagName('button')[1].style.display="none"
+    document.getElementsByTagName('button')[0].style.display="block"
+    }
+    if(user2dicevalue==1){
+       ladder()
+       document.getElementsByClassName(`square${user2dicevalue+37}`)[0].classList.add('radr')
+       user2dicevalue=38
+       document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+       trackRecord2()
+    }else if(user2dicevalue==4){
+        ladder()
+        document.getElementsByClassName(`square${user2dicevalue+10}`)[0].classList.add('radr')
+        user2dicevalue=14
+        document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+        trackRecord2()
+    }else if(user2dicevalue==9){
+        ladder()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=31
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==21){
+        ladder()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=42
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==28){
+        ladder()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=84
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==51){
+        ladder()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=67
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==72){
+        ladder()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=91
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==80){
+        ladder()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=99
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==17){
+        snake()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=7
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==54){
+        snake()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=34
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==62){
+        snake()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=19
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==64){
+        snake()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=60
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==87){
+        snake()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=36
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==93){
+        snake()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=73
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==95){
+        snake()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=75
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==98){
+        snake()
+      document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+      user2dicevalue=79
+      document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+      trackRecord2()
+    }else if(user2dicevalue==100){
+        win()
+        document.getElementById('result').innerHTML='Player2 Won'
+        document.querySelector('img').setAttribute('src','Winning.gif')
+        document.getElementsByTagName('button')[1].style.display="none"
+        document.getElementsByTagName('button')[0].style.display="none"
+    }
+    else{
+        trackRecord2()
+        document.getElementsByClassName(`square${user2dicevalue}`)[0].classList.add('radr')
+        document.getElementsByClassName(`square${user2dicevalue-L[N]}`)[0].classList.remove('radr')
+    }
+    function trackRecord2(){
+        record = document.querySelector('.trackRecord')
+        record1 = document.createElement('div')
+        record1.classList ='append2'
+        record1.innerHTML = `Player2 Dicevalue ${L[N]} moved to ${user2dicevalue}`
+        record.appendChild(record1)
+        array.push({user:'player-2',DiceValue:L[N],MovedTo:user2dicevalue})
+    }
+    }   
+    } 
+const download = function (data) {
+
+// Creating a Blob for having a csv file format
+// and passing the data with type
+const blob = new Blob([data], { type: 'text/csv' });
+
+// Creating an object for downloading url
+const url = window.URL.createObjectURL(blob)
+
+// Creating an anchor(a) tag of HTML
+const a = document.createElement('a')
+
+// Passing the blob downloading url	
+a.setAttribute('href', url)
+
+// Setting the anchor tag attribute for downloading
+// and passing the download file name
+a.setAttribute('download', 'download.csv');
+
+// Performing a download with click
+a.click()
+}
+
+const csvmaker = function (data) {
+
+// Empty array for storing the values
+csvRows = [];
+
+// Headers is basically a keys of an
+// object which is id, name, and
+// profession
+
+const headers = Object.keys(data[0]);
+
+// As for making csv format, headers
+// must be separated by comma and
+// pushing it into array
+csvRows.push(headers.join(','));
+
+// Pushing Object values into array
+// with comma separation
+for(i of data){
+const values = Object.values(i).join(',');
+csvRows.push(values)
+}
+
+// Returning the array joining with new line
+return csvRows.join('\n')
+}
+
+const get = async function () {
+
+// JavaScript object
+// const data = {
+// 	id: 1,
+// 	name: "Geeks",
+// 	profession: "developer"
+// }
+// const data=[
+// 	{ name: "John", age: 12, grade: 6 },
+// 	{ name: "Emily", age: 11, grade: 6 },
+// 	{ name: "Sarah", age: 12, grade: 6 },
+// 	// Add more student objects here...
+//   ]
+// const array = []
+
+const csvdata = csvmaker(array);
+download(csvdata);
+}
+
+// Getting element by id and adding
+// eventlistener to listen everytime
+// button get pressed
+const btn = document.getElementById('action');
+btn.addEventListener('click', get);
+</script>
+</body>
+</html>
